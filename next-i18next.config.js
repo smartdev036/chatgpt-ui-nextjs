@@ -22,6 +22,8 @@ module.exports = {
       "zh",
       "ar",
       "tr",
+      "ca",
+      "fi",
     ],
   },
   localePath:
