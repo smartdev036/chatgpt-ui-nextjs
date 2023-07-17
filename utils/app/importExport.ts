@@ -125,7 +125,12 @@ export const importData = (
   ].filter(
     (conversation, index, self) =>
       index === self.findIndex((c) => c.id === conversation.id),
+  localStorage.setItem('conversationHistory', JSON.stringify(newHistory));
+  localStorage.setItem(
+    'selectedConversation',
+    JSON.stringify(newHistory[newHistory.length - 1]),
   );
+  
   localStorage.setItem('conversationHistory', JSON.stringify(newHistory));
   if (newHistory.length > 0) {
     localStorage.setItem(
